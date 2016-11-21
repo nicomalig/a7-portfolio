@@ -2,19 +2,23 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import './index.css';
-import {Router, Route, hashHistory} from 'react-router';
-import {About} from './About.js';
-import {Portfolio} from './Portfolio.js';
-import {Contact} from './Contact.js';
+import {Router, Route, IndexRoute, hashHistory} from 'react-router';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+// Module imports
+import Home from './components/Home';
+import Portfolio from './components/Portfolio';
+import Contact from './components/Contact';
 
 
 ReactDOM.render((
-  <Router history={hashHistory}>
-    <Route path="/" component={App}>
-      <Route path="/about" component={About} />
-      <Route path="/portfolio" component={Portfolio} />
-      <Route path="/contact" component={Contact} />
-    </Route>
-  </Router>
+  <MuiThemeProvider>
+    <Router history={hashHistory}>
+      <Route path="/" component={App}>
+        <IndexRoute component={Home} />
+        <Route path="portfolio" component={Portfolio} />
+        <Route path="contact" component={Contact} />
+      </Route>
+    </Router>
+  </MuiThemeProvider>
 ), document.getElementById('root')
 );
