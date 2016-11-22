@@ -9,4 +9,3 @@
 4. Approximately how many hours did it take you to complete this challenge?
   10-15 hours
 5. Did you encounter any problems in this challenge we should warn students about in the future? How can we make the challenge better?
-  No challenges encountered.

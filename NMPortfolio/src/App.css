@@ -6,14 +6,17 @@
 
 .content {
   background-color: rgba(0, 0, 0, 0.75);
-  height: 90vh;
+  height: auto;
   color: white;
   padding: 1rem;
 }
 
 .pdf-wrapper {
   height: 75vh;
-  width: 100%;
+  width: 75%;
+  align-items: center;
+  text-align: center;
+  margin-left: 12.5%;
 }
 
 .portfoliocard {
