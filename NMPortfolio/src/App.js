@@ -49,11 +49,11 @@ var App = React.createClass ({
 
   handleTabChange(tab) {
     if (tab.props.value === "home") {
-      window.location = "/#";
+      window.location = "./#";
     } else if (tab.props.value === "portfolio") {
-      window.location = "/#/portfolio";
+      window.location = "./#/portfolio";
     } else if (tab.props.value === "contact"){
-      window.location = "/#/contact";
+      window.location = "./#/contact";
     }
   },
 
