@@ -3,7 +3,6 @@ import './App.css';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 injectTapEventPlugin();
 
-import AppBar from 'material-ui/AppBar';
 import {Tabs, Tab} from 'material-ui/Tabs';
 import FontIcon from 'material-ui/FontIcon';
 
@@ -11,30 +10,31 @@ var App = React.createClass ({
   render() {
     return (
       <div className="container">
-        <AppBar
-          className="appbar"
-          title="Nico Malig"
-          showMenuIconButton={false}
-          zDepth={2}
-        />
-      <Tabs className="tabbar">
-          <Tab
-            icon={<FontIcon className="material-icons">home</FontIcon>}
-            value="home"
-            onActive={this.handleTabChange}
-          />
-          <Tab
-            icon={<FontIcon className="material-icons">import_contacts</FontIcon>}
-            value="portfolio"
-            onActive={this.handleTabChange}
-          />
-          <Tab
-            icon={<FontIcon className="material-icons">contacts</FontIcon>}
-            value="contact"
-            onActive={this.handleTabChange}
-          />
-        </Tabs>
-        <div>
+      <div>
+        <Tabs
+          className="tabbar"
+          inkBarStyle={{
+            backgroundColor: 'white',
+          }}
+          >
+            <Tab
+              icon={<FontIcon className="material-icons">home</FontIcon>}
+              value="home"
+              onActive={this.handleTabChange}
+            />
+            <Tab
+              icon={<FontIcon className="material-icons">import_contacts</FontIcon>}
+              value="portfolio"
+              onActive={this.handleTabChange}
+            />
+            <Tab
+              icon={<FontIcon className="material-icons">contacts</FontIcon>}
+              value="contact"
+              onActive={this.handleTabChange}
+            />
+          </Tabs>
+        </div>
+        <div className="content">
           {this.props.children}
         </div>
       </div>
@@ -44,7 +44,6 @@ var App = React.createClass ({
   getInitialState() {
     return({
       hello: "world",
-      open: false,
     })
   },
 
